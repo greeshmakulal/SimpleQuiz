@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextUserName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="Simple Quiz"
+        android:textColor="#706E6E"
+        android:textSize="40sp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="heyy"
+        android:textColorHint="@color/black"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+
+        android:id="@+id/editTextUserName"
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:hint=" Enter your User Name"
+        android:textColor="#454141"
+        android:textColorHint="#6E6A6A" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:layout_below="@+id/editTextUserName"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:textColor="#454141"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:textColorHint="#6E6A6A"
+        android:hint=" Enter your Password" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="170dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#03A9F4"
+        android:text="Login" />
+    <Button
+        android:id="@+id/buttonsave"
+        android:layout_width="170dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/buttonSubmit"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#2196F3"
+        android:text="Save" />
+
+
+    <TextView
+        android:id="@+id/tv_new_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New User? Click here"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        android:layout_below="@+id/buttonsave"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/btn_testService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_new_user"
+        android:text="Start Service"
+        />
+    <Button
+        android:id="@+id/btn_stopService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_testService"
+        android:text="Stop Service"
+        />
+</RelativeLayout>

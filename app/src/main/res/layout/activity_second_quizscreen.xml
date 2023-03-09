@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/relative_second"
+    android:layout_height="match_parent"
+    tools:context=".Second_Quizscreen"
+    android:background="#FFFFFF">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/quiz_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#54C5F8"
+        app:itemRippleColor="#2196F3"
+        app:itemIconTint="@color/icons_color"
+        app:menu="@menu/quiz_menu" />
+
+    <fragment
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation"
+        />
+
+
+</RelativeLayout>
